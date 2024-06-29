@@ -22,15 +22,12 @@ provider "local" {
   // Configuration options for the local provider (if any)
 }
 
-
-
 resource "docker_image" "kong" {
   name = "kong:latest" // You can specify a specific version instead of "latest"
 }
 
 resource "docker_container" "kong" {
   image = docker_image.kong.image_id
-
 
   name  = "kong"
 
@@ -63,7 +60,6 @@ resource "docker_container" "kong" {
     "KONG_ADMIN_LISTEN=0.0.0.0:8001, 0.0.0.0:8444 ssl",
     "KONG_PLUGINS=my-plugin",
     "KONG_DECLARATIVE_CONFIG=/config/kong.yml",
-
   ]
   
   // Mound plugin code
