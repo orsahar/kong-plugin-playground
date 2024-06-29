@@ -9,7 +9,7 @@ Make sure you have the following installed on your machine:
 
 - [Terraform](https://www.terraform.io/downloads.html) (>= 0.12)
 - [Docker](https://docs.docker.com/get-docker/)
-- [Lua] (https://www.lua.org/download.html) (or ``brew install lua``)
+- [Lua](https://www.lua.org/download.html) (or ``brew install lua``)
 
 ## Getting Started
 
