@@ -9,14 +9,15 @@ Make sure you have the following installed on your machine:
 
 - [Terraform](https://www.terraform.io/downloads.html) (>= 0.12)
 - [Docker](https://docs.docker.com/get-docker/)
+- [Lua] (https://www.lua.org/download.html) (or ``brew install lua``)
 
 ## Getting Started
 
 ### 1. Clone the Repository
 
 ```sh
-git clone https://github.com/yourusername/kong-plugin-dev-env.git
-cd kong-plugin-dev-env
+git clone https://github.com/yourusername/kong-plugin-playground.git
+cd kong-plugin-playground/terraform/env-setup
 ```
 
 ### 2. Initialize and Apply Terraform Configuration
@@ -39,14 +40,12 @@ This will:
 Your plugin code should be placed in the `kong/plugins/my-plugin` directory. The file structure should look something like this:
 
 ```
-kong-plugin-dev-env/
-├── kong.yml
-├── main.tf
-└── kong/
-    └── plugins/
-        └── my-plugin/
-            ├── handler.lua
-            └── schema.lua
+
+kong/
+   └── plugins/
+       └── my-plugin/
+           ├── handler.lua
+           └── schema.lua
 ```
 
 ### 4. Configure Kong
@@ -105,5 +104,3 @@ If you find any issues or have suggestions for improvements, please open an issu
 This project is licensed under the MIT License.
 
 ---
-
-This README provides a comprehensive guide for developers to set up and test their Kong plugins using your project. It includes steps for initialization, plugin development, configuration, testing, and cleanup, ensuring a smooth experience for users.

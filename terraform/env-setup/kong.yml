@@ -1,5 +1,4 @@
 _format_version: "2.1"
-
 services:
   - name: example-service
     url: http://example.com
@@ -8,5 +7,5 @@ services:
         paths:
           - /example
         plugins:
-          - name: api-security
+          - name: my-plugin
             

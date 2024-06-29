@@ -1,5 +1,5 @@
 local kong = kong
-local HttpConnector = require "kong.plugins.api-security.http-connector"
+local HttpConnector = require "kong.plugins.my-plugin.http-connector"
 
 local MyPlugin = {
   PRIORITY = 1000,

@@ -64,7 +64,7 @@ resource "docker_container" "kong" {
   
   // Mound plugin code
   volumes {
-    host_path      = "/Users/osahar/dev/kong-poc/kong/plugins/my-plugin"
+    host_path      = "/${abspath(path.module)}/../../kong/plugins/my-plugin"
     container_path = "/usr/local/share/lua/5.1/kong/plugins/my-plugin"
   }
   // Mount a volume if you have a local declarative configuration file for Kong
